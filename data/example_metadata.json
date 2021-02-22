@@ -1,0 +1,30 @@
+{
+    "platform": "Art Blocks Curated",
+    "name": "Singularity #1",
+    "curation_status": "curated",
+    "description": "Every Singularity is unique. Each form’s properties; Symmetry, Chaos, Mass, Force and Turbulence are driven by data extracted from the transaction hash. Additional project feature(s) => Mass: 13.3% (LOW),Force: 19.2% (LOW),Symmetry: 83.5% (HIGH),Turbulence: 20.0% (LOW),Chaos: 96.1% (SUPER),Saturation: 50.4%,Colour Set: 1,Chance: 1 in 21947, ",
+    "external_url": "https://www.artblocks.io/token/8000001",
+    "artist": "Hideki Tsukamoto",
+    "royaltyInfo": {
+        "artistAddress": "0xb734aCB038dcb5e78389f0049bf42746CdEecA97",
+        "additionalPayee": "0x0000000000000000000000000000000000000000",
+        "additionalPayeePercentage": "0",
+        "royaltyFeeByID": "5"
+    },
+    "collection_name": "Singularity by Hideki Tsukamoto",
+    "traits": [{
+        "trait_type": "Singularity",
+        "value": "All Singularitys"
+    }],
+    "payout_address": "0x8E9398907d036e904ffF116132ff2Be459592277",
+    "features": ["Mass: 13.3% (LOW)", "Force: 19.2% (LOW)", "Symmetry: 83.5% (HIGH)", "Turbulence: 20.0% (LOW)", "Chaos: 96.1% (SUPER)", "Saturation: 50.4%", "Colour Set: 1", "Chance: 1 in 21947"],
+    "website": "https://twitter.com/TsukamotoHideki",
+    "is dynamic": true,
+    "script type": "js",
+    "aspect ratio (w/h)": "1",
+    "uses hash": true,
+    "tokenID": "8000001",
+    "token hash": "0xc522b731d533f58dc5cd568aa0bcae8469d572c3133b98887b9503f2f6eee9a1",
+    "license": "NFT License",
+    "image": "https://api.artblocks.io/image/8000001"
+}

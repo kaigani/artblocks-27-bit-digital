@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>PatternVGA.js – 16-bit pattern generator</title>
+		<!-- AUTHOR: Kaigani - 2014 -->
+
+		<!-- mobile viewport: -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- PatternVGA -->
+		<script src="PatternVGA.js"></script>
+
+		<script>
+
+
+            window.addEventListener('resize', handleResize, false)
+            window.addEventListener('load', update, false)
+
+            function handleResize(){
+                let canvas = document.getElementById('myCanvas')
+                canvas.width = document.body.clientWidth
+                canvas.height = document.body.clientHeight
+                update()
+            }
+            
+            function update(){
+
+                let canvas = document.getElementById('myCanvas')
+                let c = canvas.getContext('2d')
+                c.webkitImageSmoothingEnabled = false
+
+                // full-size canvas
+                canvas.width = document.body.clientWidth;
+                canvas.height = document.body.clientHeight;
+
+                /*
+                
+                draw([1,0,0,1,10,10].map(o=>10*o)) // horizontal
+                draw([0,1,-1,0,13,14].map(o=>10*o)) // vertical
+                draw([0,1,-1,0,32,14].map(o=>10*o))
+                draw([1,0,0,1,10,29].map(o=>10*o))
+                draw([0,1,-1,0,13,33].map(o=>10*o)) 
+                draw([0,1,-1,0,32,33].map(o=>10*o))
+                draw([1,0,0,1,10,48].map(o=>10*o))
+                */
+                
+                //restore the canvas state
+                //c.setTransform(1, 0, 0, 1, 0, 0)
+                
+                const scale = 10
+                const sprite = [32760,65532,131070,262143,131070,65532,32760]
+                const composite = [
+                    [1,0,0,1,10,10],
+                    [0,1,-1,0,13,14],
+                    [0,1,-1,0,32,14],
+                    [1,0,0,1,10,29],
+                    [0,1,-1,0,13,33],
+                    [0,1,-1,0,32,33],
+                    [1,0,0,1,10,48],
+                ] 
+                let rand = parseInt(Math.random()*128)
+                composite.map((o,i)=>{
+                    let bit = Math.pow(2,i)
+                    rand & bit && draw(sprite, scale, o)
+                    console.log(rand & bit)
+                })
+                
+                
+                function draw(sprite,scale, transform){
+
+                    c.setTransform(...transform.map(o=>scale*o))
+                    
+                    sprite.map((bitstring,dy)=>{
+                        for(dx=0;bitstring>0 && dx < 100;dx++){
+
+                            if(bitstring & 1){
+                                c.fillStyle = `#F00`       
+                                c.fillRect(dx,dy,1,1)
+                            }
+                            bitstring = bitstring >> 1
+                        }
+                    })
+                }
+                
+            }
+                	 
+		</script>
+
+		<script>
+    		function BlockElasticScroll(event) {
+        		event.preventDefault();
+    		}
+    	</script>
+		
+		<style type="text/css" media="screen">
+			html {
+				 height: 100%;
+				 overflow: hidden;
+			}
+			
+			body {
+				margin:  0px;
+				padding: 0px;
+				height: 100%;
+			}
+		</style>
+		
+	</head>
+	<body ontouchmove="BlockElasticScroll(event);">
+		<canvas id="myCanvas" width="100" height="100">
+			Your browser doesn't include support for the canvas tag.
+		</canvas>
+	</body>
+</html>
+		

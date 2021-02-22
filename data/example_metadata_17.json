@@ -1,0 +1,42 @@
+{
+    "platform": "Art Blocks Curated",
+    "name": "Spectron #53",
+    "curation_status": "curated",
+    "description": "This edition of video artworks is the result of my research in video art from the 60s and 70s, especially early analog video synthesizers. These were heavy hardware machines capable of generating shapes and patterns from the ground up, with no external visual input. How could these machines generate such complexity by just manipulating electronic voltage? I decided to investigate this process. Although with modern technologies, Spectron shares the procedural logic with its analog ancestors. Additional project feature(s) => Orientation: Horizontal,Palette: Pink–Mint,Frequency modulation: High,Bitwise operators: Mixed, Orientation: Horizontal,Palette: Pink–Mint,Frequency modulation: High,Bitwise operators: Mixed",
+    "external_url": "https://www.artblocks.io/token/17000053",
+    "artist": "Simon De Mai",
+    "royaltyInfo": {
+        "artistAddress": "0x911463FaAcB3D0153522E768ee47Dc0D6aD5DC5c",
+        "additionalPayee": "0x0000000000000000000000000000000000000000",
+        "additionalPayeePercentage": "0",
+        "royaltyFeeByID": "0"
+    },
+    "collection_name": "Spectron by Simon De Mai",
+    "traits": [{
+        "trait_type": "Spectron",
+        "value": "All Spectrons"
+    }, {
+        "trait_type": "Spectron",
+        "value": "Orientation: Horizontal"
+    }, {
+        "trait_type": "Spectron",
+        "value": "Palette: Pink–Mint"
+    }, {
+        "trait_type": "Spectron",
+        "value": "Frequency modulation: High"
+    }, {
+        "trait_type": "Spectron",
+        "value": "Bitwise operators: Mixed"
+    }],
+    "payout_address": "0x8E9398907d036e904ffF116132ff2Be459592277",
+    "features": ["Orientation: Horizontal", "Palette: Pink–Mint", "Frequency modulation: High", "Bitwise operators: Mixed"],
+    "website": "https://spectron.netlify.app",
+    "is dynamic": true,
+    "script type": "js",
+    "aspect ratio (w/h)": "1.33",
+    "uses hash": true,
+    "tokenID": "17000053",
+    "token hash": "0x5ef917b8d68de729cd36705dbe59e646c36fcde9c0cb5b5c08a93f1a2e2025b1",
+    "license": "CC BY-NC 4.0",
+    "image": "https://api.artblocks.io/image/17000053"
+}
