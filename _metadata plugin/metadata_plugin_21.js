@@ -57,6 +57,9 @@ else if (this.props.projectId==="21"){
             case 0x46:
                 glyph = 'OTTO'
                 break
+
+            default:
+                // do nothing
             
         } 
     
@@ -152,6 +155,8 @@ else if (this.props.projectId==="21"){
             case (2<<9)+(3<<6)+(6<<3)+7:
                 pattern = 'Highlighter'
             break
+            default:
+                // do nothing
         }
     
         features.push(`Glyph: ${glyph}`)
